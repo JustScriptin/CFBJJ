@@ -1,0 +1,59 @@
+.igGalleryContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.igImgDivWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10vh 0;
+  width: 50vw;
+  gap: 2rem;
+}
+
+.igImg {
+  width: calc(25% - 2rem);
+  transition: opacity 1s;
+  border-radius: 3px;
+}
+
+.image-visible {
+  opacity: 1;
+}
+
+.image-hidden {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 1300px) {
+  .igImg {
+    width: calc(33.33% - 2rem);
+  }
+
+  .igImgDivWrapper {
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .igImg {
+    width: calc(50% - 2rem);
+  }
+
+  .igImgDivWrapper {
+    width: 75vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .igImgDivWrapper {
+    width: 95vw;
+    gap: 1rem;
+  }
+
+  .igImg {
+    width: calc(50% - 1rem);
+  }
+}

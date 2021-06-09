@@ -1,0 +1,66 @@
+.locationContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 2vw;
+    padding: 10vh 0;
+}
+
+.locationText div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.locationContainer iframe {
+width: 25%;
+min-Width: 280px;
+height: 300px;
+border: 0;
+}
+
+.mapSpinner {
+    position: absolute;
+    left: 40%;
+    top: 75%;
+}
+
+.locationText p {
+    font-family: "Montserrat";
+    line-height: 2rem;
+}
+
+.locationText strong p {
+    font-size: 1.6rem;
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 0.1vw;
+    padding-bottom: 1vh;
+}
+
+@media only screen and (max-width: 1500px) {
+    .locationContainer {
+flex-direction: column;
+row-gap: 5vh;
+align-items: center;
+    }
+
+    .locationText div {
+        justify-content: center;
+    align-items: center;
+        width: 100%;
+    }
+
+    .mapSpinner {
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        min-Width: 280px;
+        height: 300px;
+        }
+  }

@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.historyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.historyContainer > * {
+  width: 60%;
+  font-family: "Montserrat";
+  line-height: 1.5rem;
+}
+
+.historyContainer > h1 {
+  text-align: center;
+  margin: 6rem 0 3rem 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.25rem;
+  line-height: 2.5rem;
+}
+
+.historyContainer a {
+  text-decoration: none;
+  color: red;
+}
+
+.historyContainer a:hover {
+  color: lightcoral;
+}
+
+.historyTopText {
+  display: flex;
+  margin-bottom: 4rem;
+  gap: 4rem;
+}
+
+.historyTopTextRight {
+  width: 100%;
+}
+
+.historyQuote {
+  position: relative;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+
+.historySignature {
+  position: absolute;
+  right: 0;
+}
+
+.historyContainer > img {
+  border-radius: 5px;
+  margin-bottom: 4rem;
+}
+
+.historyBottomText {
+  margin-bottom: 6rem;
+}
+
+@media only screen and (max-width: 1500px) {
+  .historyTopText {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .historyContainer > * {
+    width: 90%;
+  }
+
+  .historyContainer > img {
+    width: 90%;
+  }
+}

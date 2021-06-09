@@ -1,0 +1,40 @@
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  background-color: white;
+  font-size: 0.7rem;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+}
+
+div.navLinks > * {
+  text-decoration: none;
+  color: black;
+  margin-right: 2.5vw;
+}
+
+.navImg {
+  width: 2.5rem;
+  margin-right: 15vw;
+  margin-left: 5vw;
+  user-select: none;
+}
+
+@media screen and (max-width: 635px) {
+  .navLinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    display: none;
+  }
+}

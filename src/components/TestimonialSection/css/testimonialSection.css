@@ -1,0 +1,74 @@
+.testimonialSectionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonialSectionContainer p {
+  min-width: 25ch;
+}
+
+.testimonialColWrapper {
+  display: flex;
+  width: 70vw;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10vh 1vw 5vh 1vw;
+  column-gap: 8vh;
+  border-bottom: 2px solid gainsboro;
+}
+
+.testimonialColWrapper div {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+  letter-spacing: 0.04rem;
+  line-height: 1.5rem;
+}
+
+.testimonialColWrapper h3,
+h4 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 500;
+  font-size: 1.5rem;
+  white-space: pre-wrap;
+  letter-spacing: 0.15rem;
+}
+
+.testimonialColWrapper div > p:first-of-type {
+  padding: 2vh 0;
+}
+
+.testimonialColWrapper div:nth-child(n + 2) > p:first-of-type {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 500;
+  font-size: 1.2rem;
+  white-space: pre-wrap;
+  letter-spacing: 0.15rem;
+}
+
+.testimonialSectionCol1 button {
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  background-color: black;
+  padding: 1vw;
+  margin-top: 2vh;
+}
+
+@media only screen and (max-width: 750px) {
+  .testimonialSectionContainer p {
+    min-width: 0ch;
+  }
+
+  .testimonialColWrapper {
+    flex-wrap: wrap;
+    row-gap: 8vh;
+    column-gap: 0;
+  }
+
+  .testimonialColWrapper div {
+    width: 100%;
+  }
+}

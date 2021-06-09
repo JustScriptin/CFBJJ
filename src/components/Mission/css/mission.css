@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.missionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem 0;
+}
+
+.missionContainer > * {
+  width: 50%;
+}
+
+.missionContainer h1 {
+  margin-bottom: 2rem;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 0.15rem;
+}
+
+.missionSection1 {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid grey;
+  font-family: "Montserrat";
+}
+
+.missionSection1 img {
+  width: 50%;
+  border-radius: 5px;
+}
+
+.missionSection1Text {
+}
+
+.missionSection2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.missionSection2Header {
+  margin-bottom: 1.5rem;
+}
+
+.missionSection2Text {
+}
+
+.missionSection2Text span {
+  display: block;
+  color: red;
+}
+
+@media only screen and (max-width: 1585px) {
+  .missionContainer > * {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .missionContainer > * {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 935px) {
+  .missionContainer > * {
+    width: 90%;
+  }
+
+  .missionSection1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .missionSection1 img {
+    width: 100%;
+  }
+}

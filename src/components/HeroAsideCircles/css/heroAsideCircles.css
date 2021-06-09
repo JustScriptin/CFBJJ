@@ -1,0 +1,16 @@
+/* .HACOutlined {
+  width: 22.5px;
+  height: 22.5px;
+} */
+
+.hACContainer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1%;
+  top: 50vh;
+  z-index: 2;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}

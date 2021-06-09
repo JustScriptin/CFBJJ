@@ -1,0 +1,53 @@
+.heroAsideCircleLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid black;
+  width: 12.5px;
+  height: 12.5px;
+  background-color: white;
+  /* filter: drop-shadow(1px 1px 1px white); */
+}
+
+.circle:hover {
+  border: 0px;
+  background-color: rgba(255, 0, 0, 0.75);
+}
+
+.circle p {
+  visibility: hidden;
+  opacity: 0;
+  user-select: none;
+  position: absolute;
+  right: 0.8rem;
+  white-space: nowrap;
+  transition: 0.5s;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.15vw;
+  word-spacing: 0.15vw;
+  text-shadow: -0.9px 0 white, 0 0.9px white, 0.9px 0 white, 0 -0.9px white;
+}
+
+.circle:hover p {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  right: 1.5rem;
+}
+
+/* .circle:hover::after {
+  content: "Central Florida BJJ";
+  position: absolute;
+  left: -10rem;
+  white-space: nowrap;
+} */

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.neumorphicWrapper {
+    position: relative;
+    height: 50vh;
+    overflow:scroll;
+}
+
+.neumorphicContainer td {
+background-clip: padding-box;
+border-radius: 5px;
+border: 1px solid #343434;
+  }
+
+.neumorphicContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #343434;
+  border-radius: 5px;
+}
+
+table.neumorphic{
+  width: 600px;
+  border-spacing: 0;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 5px;
+}
+table.neumorphic thead{
+    color: white;
+    background-color: #FF1919;
+  box-shadow: 9px 9px 16px rgba(92, 78, 57, 0.6);
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: .13rem;
+}
+
+table.neumorphic tbody{
+    font-family: 'Montserrat', sans-serif;
+}
+
+table.neumorphic th{
+  padding: 7px;
+}
+
+table.neumorphic>tbody>tr>td {
+  padding: 10px;
+  font-size: 14px;
+  position: relative;
+}
+
+
+table.neumorphic>tbody>tr:hover {
+  padding: 20px;
+  box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.6),
+  -9px -2px 16px rgba(92, 78, 57, 0.6);
+}
+
+table.neumorphic tr td:first-child::before {
+  content: "";
+  position: absolute;
+  padding: 7px;
+  top: 0;
+  left: -5000px;
+  width: 10000px;
+  height: 100%;
+  z-index: -10;
+}
+
+table.neumorphic td:hover::after {
+  content: "";
+  position: absolute;
+  box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.6),
+  -4px -9px 16px rgba(92, 78, 57, 0.6); 
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 550px) {
+    .neumorphicContainer {
+margin: 0 150px;
+      }
+  }
+

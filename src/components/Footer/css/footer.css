@@ -1,0 +1,60 @@
+.footerContainer {
+  position: relative;
+  display: flex;
+  background-color: black;
+  padding: 8vh 0;
+  font-family: "Bebas Neue", cursive;
+}
+
+.footerWrapper,
+.footerLocation,
+.footerCallUs,
+.footerHours {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  row-gap: 1vh;
+  margin: 2vh 0;
+}
+
+.footerWrapper {
+  margin: 0 25vw;
+}
+
+.footerWrapper p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  white-space: pre-wrap;
+  letter-spacing: 0.15rem;
+  width: 50%;
+}
+
+.footerWrapper h1 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  white-space: pre-wrap;
+  letter-spacing: 0.15rem;
+}
+
+.footerHours div a {
+  color: white;
+}
+
+.footerUpArrow {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  fill: black;
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: bobbing 0.5s ease infinite alternate-reverse;
+}
+
+@keyframes bobbing {
+  100% {
+    transform: translateY(-6%);
+  }
+}

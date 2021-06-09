@@ -1,0 +1,40 @@
+.scheduleText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scheduleText > * {
+    width: 50vw;
+}
+
+.scheduleText h1 {
+    display: flex;
+    border-bottom: 1px solid grey;
+    justify-content: center;
+    align-items: center;
+    padding: 6vh 0;
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 0.1vw;
+}
+
+.scheduleText div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scheduleText p {
+    text-align: center;
+    font-family: "Montserrat";
+    line-height: 2rem;
+}
+
+.scheduleText strong p {
+    padding-top: 3vh;
+    font-size: 1.32rem;
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 0.1vw;
+}

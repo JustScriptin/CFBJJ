@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@800&display=swap");
+.aboutUsSectionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 0;
+  row-gap: 8vh;
+}
+
+.aboutUsSection1 {
+  display: flex;
+  width: 50vw;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2vw;
+}
+
+.aboutUsSectionVideo {
+  width: 100%;
+  height: 100%;
+}
+
+.aboutUsSection1Right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 20ch;
+}
+
+.aboutUsSection1Right h2 {
+  padding-bottom: 1rem;
+}
+
+.aboutUsSection2 {
+  display: flex;
+  width: 50vw;
+  column-gap: 2.5vw;
+  padding: 2vh 1vw;
+  border-top: 2px solid gainsboro;
+  border-bottom: 2px solid gainsboro;
+}
+
+.aboutUsSection2Left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  text-align: center;
+}
+
+.aboutUsSection2Left > h2 {
+  padding: 1vh 0;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.25rem;
+}
+
+.aboutUsSection2Right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.aboutUsSection2Right > button {
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  background-color: black;
+  padding: 1vw;
+  min-width: 15ch;
+}
+
+.aboutUsSection3 {
+  display: flex;
+  column-gap: 2vw;
+  width: 50vw;
+}
+
+.aboutUsSection3 h4 {
+  margin: 1vw 0;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 500;
+  font-size: 1.5rem;
+  white-space: pre-wrap;
+  letter-spacing: 0.15rem;
+}
+
+.aboutUsSection3 p {
+  text-align: center;
+  letter-spacing: 0.04rem;
+  line-height: 1.5rem;
+}
+
+.aboutUsSection3Img1 {
+  background-image: url("../assets/aboutUsSectionImg1.jfif");
+  height: 25vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutUsSection3Img2 {
+  background-image: url("../assets/aboutUsSectionImg2.jfif");
+  height: 25vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutUsSection3Img3 {
+  background-image: url("../assets/aboutUsSectionImg3.jfif");
+  height: 25vh;
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (max-width: 750px) {
+  .aboutUsSection2 {
+    flex-wrap: wrap;
+    row-gap: 3vh;
+    justify-content: center;
+  }
+
+  .aboutUsSection3 {
+    flex-wrap: wrap;
+    column-gap: 0vw;
+    row-gap: 8vh;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .aboutUsSection3Img3 {
+    background-position: top;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .aboutUsSection1 {
+    flex-wrap: wrap;
+    width: 90vw;
+    column-gap: 0;
+    row-gap: 3vh;
+  }
+
+  .aboutUsSection2Right {
+    justify-content: center;
+  }
+}

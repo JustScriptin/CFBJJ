@@ -1,0 +1,51 @@
+div.heroImg {
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.heroH1 {
+  display: inline-block;
+  position: absolute;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 1rem;
+  padding: 4vh 4vw;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  user-select: text;
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white;
+  word-wrap: break-word;
+}
+
+.downArrowIcon {
+  position: absolute;
+  filter: drop-shadow(2px 2px 2px black);
+  color: white;
+  width: 3.2vw;
+  height: 3.2vw;
+  min-width: 40px;
+  min-height: 40px;
+  left: 49%;
+  bottom: 12%;
+  animation: bobbing 0.5s ease infinite alternate-reverse;
+}
+
+@keyframes bobbing {
+  100% {
+    transform: translateY(-6%);
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .heroH1 {
+    max-width: 280px;
+    word-wrap: break-word;
+    padding: 4vh 0vw 4vh 2vw;
+    letter-spacing: 0.6rem;
+  }
+}
