@@ -7,7 +7,7 @@ function InstagramGallery() {
 
   const [instagramGalleryObj, setinstagramGalleryObj] = useState([]);
   const url =
-    "https://graph.instagram.com/me/media?fields=id,media_url,media_type&access_token=IGQVJXTHMtR1BmaHVMalp1ZAWg1aFVMYUNiSTRWNmpKYUV6TDRNMWFwR21TV2trLVhnSzJSMmt0emdFZAktwMTVyWXE2T1ZAkWTFQZAmtOVDVleXBpek9lZAk5nRm44MVJPYlFncG9pVk1n";
+    "https://graph.instagram.com/me/media?fields=id,media_url,media_type&access_token=IGQVJVaGlQMk9JMUtMdjExcDZAGU3EtbnROWnhlSzdoRHlpbElSV2QtRlIwNHRFTWV2aFdMWW9NWlBpZA2s2WEJKR0s0ZA0tCTDdzcm5UbkU2QUtRbjNOaUFibDE5dlYwNC1XV0YwNWln";
 
   const getInstagramGallery = async () => {
     try {
