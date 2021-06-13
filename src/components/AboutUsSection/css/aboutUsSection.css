@@ -66,7 +66,7 @@
   width: 50%;
 }
 
-.aboutUsSection2Right > button {
+.aboutUsSection2Right button {
   border: none;
   cursor: pointer;
   color: white;
@@ -74,6 +74,15 @@
   background-color: black;
   padding: 1vw;
   min-width: 15ch;
+}
+
+.aboutUsSectionPhoneCallLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.aboutUsSectionPhoneCallLink:hover {
+  color: rgb(68, 68, 68);
 }
 
 .aboutUsSection3 {

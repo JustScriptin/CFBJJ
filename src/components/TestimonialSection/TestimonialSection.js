@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./css/testimonialSection.css";
 
 function TestimonialSection() {
@@ -11,7 +12,9 @@ function TestimonialSection() {
             We're so confident that you'll enjoy both the process and the
             results that we'll give you a week to try it out, completely free.
           </p>
-          <button>GET IN TOUCH WITH US TODAY</button>
+          <Link to="/contact">
+            <button>GET IN TOUCH WITH US TODAY</button>
+          </Link>
         </div>
         <div className="testimonialSectionCol2">
           <h4>Robbie A. Says...</h4>

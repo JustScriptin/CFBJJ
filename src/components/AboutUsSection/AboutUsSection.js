@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./css/aboutUsSection.css";
 import video from "./assets/aboutUsSectionVideo.mp4";
 import img1 from "./assets/aboutUsSectionImg1.jfif";
@@ -33,12 +34,22 @@ function aboutUsSection() {
         <div className="aboutUsSection2Left">
           <h2>Try Jiu Jitsu For A Week, For FREE!</h2>
           <p>
-            Have a free week on us. <strong>Call us at (407) 603-6255</strong>{" "}
+            Have a free week on us.{" "}
+            <strong>
+              <a
+                className="aboutUsSectionPhoneCallLink"
+                href="tel:407-603-6255"
+              >
+                Call us at (407) 603-6255
+              </a>
+            </strong>{" "}
             or <strong>click the button</strong> to email us.
           </p>
         </div>
         <div className="aboutUsSection2Right">
-          <button>GET MY FREE WEEK TRAIL!</button>
+          <Link to="/contact#contactSection1">
+            <button>GET MY FREE WEEK TRAIL!</button>
+          </Link>
         </div>
       </div>
       <div className="aboutUsSection3">

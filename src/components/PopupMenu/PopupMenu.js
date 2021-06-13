@@ -56,8 +56,16 @@ function PopupMenu() {
             linkTo="/contact"
             onClick={handleToggleOpen}
           />
-          <PopupMenuItems name={<ImFacebook2 />} onClick={handleToggleOpen} />
-          <PopupMenuItems name={<ImInstagram />} onClick={handleToggleOpen} />
+          <PopupMenuItems
+            name={<ImFacebook2 />}
+            linkTo="/facebook"
+            onClick={handleToggleOpen}
+          />
+          <PopupMenuItems
+            name={<ImInstagram />}
+            linkTo="/instagram"
+            onClick={handleToggleOpen}
+          />
         </div>
       </div>
     </ClickAwayListener>

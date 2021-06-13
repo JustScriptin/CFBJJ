@@ -55,6 +55,7 @@ h4 {
   background-color: black;
   padding: 1vw;
   margin-top: 2vh;
+  width: 100%;
 }
 
 @media only screen and (max-width: 750px) {

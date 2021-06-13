@@ -17,6 +17,20 @@ function App() {
       <Route path="/gallery" component={Gallery} />
       <Route path="/about" component={AboutPage} />
       <Route path="/contact" component={Contact} />
+      <Route
+        path="/instagram"
+        component={() => {
+          window.open("https://www.instagram.com/centralfloridabjj/", "_blank");
+          return <Gallery />;
+        }}
+      />
+      <Route
+        path="/facebook"
+        component={() => {
+          window.open("https://www.facebook.com/CentralFloridaBJJ", "_blank");
+          return <Gallery />;
+        }}
+      />
     </div>
   );
 }

@@ -16,10 +16,10 @@ function Nav() {
         <Link to="/gallery">GALLERY</Link>
         <Link to="/about">ABOUT</Link>
         <Link to="/contact">CONTACT</Link>
-        <a href="https://www.facebook.com/CentralFloridaBJJ">
+        <a href="https://www.facebook.com/CentralFloridaBJJ" target="_blank">
           <ImFacebook2 />
         </a>
-        <a href="https://www.instagram.com/centralfloridabjj/">
+        <a href="https://www.instagram.com/centralfloridabjj/" target="_blank">
           <ImInstagram />
         </a>
       </div>
