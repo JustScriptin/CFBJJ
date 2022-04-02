@@ -27,13 +27,13 @@
     <title>React App</title>
     <script defer type="text/javascript">
       //<![CDATA[
+        let initialWidth = window.innerWidth;
+        let initialHeight = window.innerHeight;
       let viewport = document.querySelector("meta[name=viewport]");
       viewport.setAttribute(
         "content",
         "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
       );
-      let initialWidth = window.innerWidth;
-      let initialHeight = window.innerHeight;
       const resizeEvent = (e) => {
         if (e === "keyboardIn") {
           document.documentElement.style.setProperty("overflow", "auto");
