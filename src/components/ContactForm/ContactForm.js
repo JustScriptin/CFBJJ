@@ -1,60 +1,194 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { loadMap } from "../../stateManagement/ducks/mapDucks";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import Popover from "@material-ui/core/Popover";
+import { send } from "emailjs-com";
 import "./css/contactForm.css";
 
 function ContactForm() {
-  const [mapLoaded, setMapLoaded] = useState(true);
+  const [error, setError] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [toSend, setToSend] = useState({
+    fName: "",
+    lName: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
+  });
+  const open = Boolean(anchorEl);
 
-  const hideSpinner = () => {
-    setMapLoaded(false);
+  const onEnter = (e, sendValue) => {
+    if (e.keyCode !== 13) return;
+    const successArr = [];
+    for (const key in sendValue) {
+      if (sendValue[key] !== "" || key === "lName") successArr.push(key);
+    }
+    if (successArr.length === 5) {
+      onSubmit();
+      setError(false);
+    } else {
+      setError(true);
+      setAnchorEl(e.currentTarget);
+    }
   };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const onSubmit = () => {
+    //e.preventDefault();
+    send("CFBJJ", "template_3od1g8m", toSend, "8lv-8e-TxmOhZqLyX")
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+      });
+  };
+
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+    console.log(toSend);
+  };
+
+  const dispatch = useDispatch();
+  //const [mapLoaded, setMapLoaded] = useState(true);
+  const mapLoaded = useSelector((state) => state.map.isLoading);
+
+  const handleHideSpinner = () => {
+    dispatch(loadMap());
+  };
+
   return (
     <div className="contactFormWrapper" id="contactSection1">
       <h1 className="contactFormH1">
         Feel Free To Contact Us With Any Questions
       </h1>
       <div className="contactFormContainer">
-        <div className="contactFormInputs">
+        <form className="contactFormInputs" noValidate autoComplete="on">
           <div className="contactFormName">
-            <form id="contactFormName" noValidate autoComplete="on">
-              <TextField label="First Name *" />
-              <TextField label="Last Name " />
-            </form>
+            <div id="contactFormName">
+              <TextField
+                required
+                error={!toSend.fName && error}
+                name="fName"
+                label="First Name"
+                value={toSend.fName}
+                onChange={handleChange}
+                onKeyDown={(e) => {
+                  onEnter(e, toSend);
+                }}
+              />
+              <TextField
+                name="lName"
+                label="Last Name"
+                value={toSend.lName}
+                onChange={handleChange}
+                onKeyDown={(e) => {
+                  onEnter(e, toSend);
+                }}
+              />
+            </div>
           </div>
           <div className="contactFormEmail">
-            <form noValidate autoComplete="on">
-              <TextField label="Email Address *" />
-            </form>
+            <div>
+              <TextField
+                required
+                error={!toSend.email && error}
+                name="email"
+                label="Email Address"
+                value={toSend.email}
+                onChange={handleChange}
+                onKeyDown={(e) => {
+                  onEnter(e, toSend);
+                }}
+              />
+            </div>
           </div>
           <div className="contactFormPhone">
-            <form noValidate autoComplete="on">
-              <TextField label="Phone Number *" />
-            </form>
+            <div>
+              <TextField
+                required
+                error={!toSend.phoneNumber && error}
+                name="phoneNumber"
+                label="Phone Number"
+                value={toSend.phoneNumber}
+                onChange={handleChange}
+                onKeyDown={(e) => {
+                  onEnter(e, toSend);
+                }}
+              />
+            </div>
           </div>
           <div className="contactFormMessage">
-            <form noValidate autoComplete="on">
-              <TextField label="Message *" multiline rows={4} />
-            </form>
+            <div>
+              <TextField
+                required
+                error={!toSend.message && error}
+                name="message"
+                label="Message"
+                multiline
+                rows={4}
+                value={toSend.message}
+                onChange={handleChange}
+                onKeyDown={(e) => {
+                  onEnter(e, toSend);
+                }}
+              />
+            </div>
+
+            <Button
+              color={error ? "secondary" : "default"}
+              onClick={(e) => {
+                onEnter({ keyCode: 13 }, toSend);
+                setAnchorEl(e.currentTarget);
+              }}
+            >
+              Submit
+            </Button>
+
+            {error && (
+              <Popover
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "center",
+                }}
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "center",
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <p style={{ margin: "5px 10px" }}>
+                  Please Fill Out All Required Fields
+                </p>
+              </Popover>
+            )}
           </div>
           <div className="contactFormSendBtn"></div>
-        </div>
+        </form>
         <div className="contactFormLocationSection">
           <p className="contactFormAddressPTag">
             1420 Gemini Blvd. Suite #8 Orlando, Florida 32837 <br /> (407)
             603-6255
           </p>
-          {mapLoaded ? (
+          {mapLoaded && (
             <div className="mapSpinner">
               <CircularProgress color="secondary" />
             </div>
-          ) : null}
+          )}
           <iframe
             className="contactFormIframe"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.515664215762!2d-81.39967918457421!3d28.40369320115119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77d8853763ead%3A0xe4ae3848ee18c7e4!2sCentral%20Florida%20BJJ!5e0!3m2!1sen!2sus!4v1616648261390!5m2!1sen!2sus"
             allowfullscreen=""
             loading="lazy"
-            onLoad={() => hideSpinner()}
+            onLoad={() => handleHideSpinner()}
           ></iframe>
         </div>
       </div>

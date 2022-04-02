@@ -1,4 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  toggle,
+  displayBlock,
+  displayNone,
+} from "../../stateManagement/ducks/popupMenuDucks";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import { MdMenu } from "react-icons/md";
 import { ImFacebook2, ImInstagram } from "react-icons/im";
@@ -6,23 +12,29 @@ import PopupMenuItems from "./components/PopupMenuItems/PopupMenuItems";
 import "./css/popupMenu.css";
 
 function PopupMenu() {
-  const [toggleOpen, setToggleOpen] = useState(false);
-  const [style, setStyle] = useState({ display: "none" });
+  const dispatch = useDispatch();
+  //const [toggleOpen, setToggleOpen] = useState(false);
+  const toggleOpen = useSelector((state) => state.popupMenu.toggleOpen);
+  //const [style, setStyle] = useState({ display: "none" });
+  const style = useSelector((state) => state.popupMenu.style);
 
   const handleToggleOpen = () => {
-    setToggleOpen((prev) => !prev);
-    console.log(toggleOpen);
+    //setToggleOpen((prev) => !prev);
+    dispatch(toggle());
     if (toggleOpen === true) {
-      setStyle({ display: "none" });
+      //setStyle({ display: "none" });
+      dispatch(displayNone());
     } else {
-      setStyle({ display: "block" });
+      //setStyle({ display: "block" });
+      dispatch(displayBlock());
     }
-    console.log(style);
   };
 
   const handleClickAway = () => {
-    setToggleOpen(false);
-    setStyle({ display: "none" });
+    //setToggleOpen(false);
+    dispatch(toggle());
+    //setStyle({ display: "none" });
+    dispatch(displayNone());
   };
 
   return (

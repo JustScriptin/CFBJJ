@@ -22,7 +22,7 @@ function InstructorSection() {
       </div>
       <img
         className="instructorSectionRight"
-        src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.18169-9/29815_391063297640036_1157658225_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=973b4a&_nc_ohc=pT5t2flWr9QAX_bAzqK&_nc_ht=scontent-mia3-1.xx&oh=59714344604470ab25c78927c2e217ea&oe=60DEE286"
+        src="https://i.postimg.cc/V6VpDF1F/643939-391063014306731-463073394-n.jpg"
         alt="Alex's promotion day with de la riva"
       />
     </div>

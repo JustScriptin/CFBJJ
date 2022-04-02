@@ -12,7 +12,7 @@ function AboutPage() {
     <div>
       <Nav />
       <Hero
-        imgUrl="https://scontent-mia3-2.xx.fbcdn.net/v/t31.18172-8/25587070_1604192932993727_2649585881205739652_o.jpg?_nc_cat=102&ccb=1-3&_nc_sid=973b4a&_nc_ohc=DmHlJtuA2wwAX9bIc9t&_nc_ht=scontent-mia3-2.xx&oh=627196d83b121adab1928a8091fd7dca&oe=60E16149"
+        imgUrl="https://i.postimg.cc/zvDvF8zh/14290023-1152467371499621-5264305416254274498-o.jpg"
         heading="About CFBJJ"
         headingBgColor="transparent"
         height="100vh"
@@ -30,7 +30,7 @@ function AboutPage() {
       />
       <History />
       <Hero
-        imgUrl="https://scontent-mia3-1.xx.fbcdn.net/v/t31.18172-8/18673255_1409217875824568_550021346260820527_o.jpg?_nc_cat=111&ccb=1-3&_nc_sid=973b4a&_nc_ohc=9U78dY3HPAMAX-9pfKs&_nc_ht=scontent-mia3-1.xx&oh=f4c11ad4f055a49920e78abc89b631ee&oe=60E0ADA1"
+        imgUrl="https://i.postimg.cc/Kz8h9zTm/25587997-1604192719660415-8392414951611354317-o.jpg"
         heading="Instructor"
         headingBgColor="transparent"
         height="100vh"

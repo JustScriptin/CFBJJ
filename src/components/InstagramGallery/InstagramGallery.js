@@ -21,12 +21,6 @@ function InstagramGallery() {
 
   useEffect(() => {
     getInstagramGallery();
-
-    // const interval = setInterval(() => {
-    //   getInstagramGallery();
-    // }, 10000);
-
-    // return () => clearInterval(interval);
   }, []);
   return (
     <div className="igGalleryContainer">
