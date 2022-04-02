@@ -50,6 +50,7 @@ align-items: center;
 
     .locationText div {
         justify-content: center;
+        text-align: center;
     align-items: center;
         width: 100%;
     }

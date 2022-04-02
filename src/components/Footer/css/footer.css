@@ -4,6 +4,7 @@
   background-color: black;
   padding: 8vh 0;
   font-family: "Bebas Neue", cursive;
+  box-shadow: 0 50vh 0 50vh #000;
 }
 
 .footerWrapper,
@@ -43,7 +44,9 @@
 .footerUpArrow {
   position: absolute;
   top: -2rem;
-  left: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   fill: black;
   width: 4rem;
   height: 4rem;

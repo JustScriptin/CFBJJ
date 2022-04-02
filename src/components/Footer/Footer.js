@@ -1,21 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { IoMdArrowDropupCircle } from "react-icons/io";
 import "./css/footer.css";
 
 function Footer() {
+  const [isLoaded, setIsLoaded] = useState(false)
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
+
   return (
     <div className="footerContainer">
-      <IoMdArrowDropupCircle
+      {<IoMdArrowDropupCircle
         className="footerUpArrow"
         onClick={() => scrollToTop()}
-      />
+      />}
       <div className="footerWrapper">
         <div className="footerLocation">
           <h1>Main Location</h1>

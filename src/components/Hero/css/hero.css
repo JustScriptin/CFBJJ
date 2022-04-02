@@ -30,7 +30,9 @@ div.heroImg {
   height: 3.2vw;
   min-width: 40px;
   min-height: 40px;
-  left: 49%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   bottom: 12%;
   animation: bobbing 0.5s ease infinite alternate-reverse;
 }

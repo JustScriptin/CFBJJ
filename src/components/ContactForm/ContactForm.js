@@ -103,6 +103,7 @@ function ContactForm() {
                 label="Email Address"
                 value={toSend.email}
                 onChange={handleChange}
+                type="email"
                 onKeyDown={(e) => {
                   onEnter(e, toSend);
                 }}
@@ -118,6 +119,7 @@ function ContactForm() {
                 label="Phone Number"
                 value={toSend.phoneNumber}
                 onChange={handleChange}
+                type="tel"
                 onKeyDown={(e) => {
                   onEnter(e, toSend);
                 }}

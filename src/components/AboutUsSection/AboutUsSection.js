@@ -48,7 +48,7 @@ function aboutUsSection() {
         </div>
         <div className="aboutUsSection2Right">
           <Link to="/contact#contactSection1">
-            <button>GET MY FREE WEEK TRAIL!</button>
+            <button>GET MY FREE WEEK TRIAL!</button>
           </Link>
         </div>
       </div>
