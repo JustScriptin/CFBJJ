@@ -186,7 +186,7 @@ function ContactForm() {
           <iframe
             className="contactFormIframe"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.515664215762!2d-81.39967918457421!3d28.40369320115119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77d8853763ead%3A0xe4ae3848ee18c7e4!2sCentral%20Florida%20BJJ!5e0!3m2!1sen!2sus!4v1616648261390!5m2!1sen!2sus"
-            allowfullscreen=""
+            allowFullScreen
             loading="lazy"
             onLoad={() => handleHideSpinner()}
           ></iframe>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import ContactForm from "../ContactForm/ContactForm";
 import Footer from "../Footer/Footer";
 import Hero from "../Hero/Hero";
