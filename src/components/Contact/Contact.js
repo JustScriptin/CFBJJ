@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import ContactForm from "../ContactForm/ContactForm";
 import Footer from "../Footer/Footer";
 import Hero from "../Hero/Hero";
+import MidSectionWrapper from "../MidSectionWrapper/MidSectionWrapper";
 import Nav from "../Nav/Nav";
 import "./css/contact.css";
 
@@ -17,7 +18,8 @@ function Contact() {
         anchorId="contactHeroImgAnchor1"
         arrowAnchorId="contactSection1"
       />
-      <ContactForm />
+      <MidSectionWrapper>
+      <ContactForm /></MidSectionWrapper>
       <Footer />
     </div>
   );

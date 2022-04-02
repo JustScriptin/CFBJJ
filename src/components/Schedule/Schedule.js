@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import Hero from "../Hero/Hero";
+import MidSectionWrapper from "../MidSectionWrapper/MidSectionWrapper";
 import Nav from "../Nav/Nav";
 import ScheduleTable from "../ScheduleTable/ScheduleTable";
 import ScheduleText from "../ScheduleText/ScheduleText";
@@ -17,8 +18,10 @@ function Schedule() {
         anchorId="scheduleHeroImgAnchor1"
         arrowAnchorId="scheduleSection1"
       />
+      <MidSectionWrapper>
       <ScheduleText />
       <ScheduleTable />
+      </MidSectionWrapper>
       <Footer />
     </div>
   );

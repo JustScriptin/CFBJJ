@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer";
 import Hero from "../Hero/Hero";
 import Nav from "../Nav/Nav";
 import "./css/location.css";
+import MidSectionWrapper from "../MidSectionWrapper/MidSectionWrapper";
 
 function Location() {
   const [mapLoaded, setMapLoaded] = useState(true);
@@ -22,6 +23,7 @@ function Location() {
         anchorId="locationHeroImgAnchor1"
         arrowAnchorId="locationSection1"
       />
+      <MidSectionWrapper>
       <div className="locationContainer" id="locationSection1">
         {mapLoaded ? (
           <div className="mapSpinner">
@@ -44,6 +46,7 @@ function Location() {
           </div>
         </div>
       </div>
+      </MidSectionWrapper>
       <Footer />
     </div>
   );
