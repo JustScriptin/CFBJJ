@@ -92,6 +92,6 @@ div.MuiInput-underline::after {
   .contactFormIframe {
     height: 60%;
     width: 100%;
-    padding-bottom: 4rem;
+    margin-bottom: 10rem;
   }
 }
