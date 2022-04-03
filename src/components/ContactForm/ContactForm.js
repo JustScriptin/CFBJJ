@@ -10,6 +10,7 @@ import "./css/contactForm.css";
 
 function ContactForm() {
   const [error, setError] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [toSend, setToSend] = useState({
     fName: "",
@@ -18,6 +19,7 @@ function ContactForm() {
     phoneNumber: "",
     message: "",
   });
+  const [initialToSend, setInitialToSend] = useState(toSend);
   const open = Boolean(anchorEl);
 
   const onEnter = (e, sendValue) => {
@@ -27,8 +29,9 @@ function ContactForm() {
       if (sendValue[key] !== "" || key === "lName") successArr.push(key);
     }
     if (successArr.length === 5) {
-      onSubmit();
+      onSubmit(e);
       setError(false);
+      setAnchorEl(e.currentTarget);
     } else {
       setError(true);
       setAnchorEl(e.currentTarget);
@@ -39,11 +42,13 @@ function ContactForm() {
     setAnchorEl(null);
   };
 
-  const onSubmit = () => {
+  const onSubmit = (e) => {
     //e.preventDefault();
     send("CFBJJ", "template_3od1g8m", toSend, "8lv-8e-TxmOhZqLyX")
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
+        setSubmitted(true);
+        setToSend(initialToSend);
       })
       .catch((err) => {
         console.log("FAILED...", err);
@@ -144,7 +149,7 @@ function ContactForm() {
             </div>
 
             <Button
-              color={error ? "secondary" : "default"}
+              color={error ? "secondary" : submitted ? "primary" : "default"}
               onClick={(e) => {
                 onEnter({ keyCode: 13 }, toSend);
                 setAnchorEl(e.currentTarget);
@@ -169,6 +174,25 @@ function ContactForm() {
               >
                 <p style={{ margin: "5px 10px" }}>
                   Please Fill Out All Required Fields
+                </p>
+              </Popover>
+            )}
+            {submitted && (
+              <Popover
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "center",
+                }}
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "center",
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <p style={{ margin: "5px 10px", width: "35ch", textAlign: "center" }}>
+                  Thank you for your interest in Central Florida Bjj. We'll get back you shortly.
                 </p>
               </Popover>
             )}

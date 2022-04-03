@@ -8,7 +8,7 @@ import PopupMenu from "../PopupMenu/PopupMenu";
 function Nav() {
   return (
     <div className="navContainer">
-      <img className="navImg" src={cfbjj} alt="" />
+      <Link to="/"><img className="navImg" src={cfbjj} alt="" /></Link>
       <div className="navLinks">
         <Link to="/">HOME</Link>
         <Link to="/schedule">SCHEDULE</Link>
